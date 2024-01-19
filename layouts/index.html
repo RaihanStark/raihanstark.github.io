@@ -4,13 +4,40 @@
 	<body>
 		<div class="content">
 			{{ partial "head.html" . }}
+			<div class="">
+				<h1 class="page-title">About Me</h1>
+				<p>
+					Hi, I'm Raihan Yudo Saputra, a software engineer who loves writing
+					about software. Currently, my main focus is on Front-end Web
+					Development, but I also have a lot of interest in other fields of
+					software engineering, especially in Full-stack Development.
+				</p>
+				<p>
+					I'm also a full-time freelancer. If you have a project that you want
+					to get started, think you need my help with something or just fancy
+					saying hey, then get in touch.
+				</p>
 
-			<main class="list">
-				<div class="site-description">
-					{{- if isset .Site.Params "subtitle" -}}
-					<p>{{ .Site.Params.Subtitle | markdownify }}</p>
-					{{- end -}}
-				</div>
+				<section class="info-section">
+					<ul class="info-group">
+						<h2>Skills</h2>
+						<li>React, Next JS</li>
+						<li>Material UI, Tailwind</li>
+						<li>Node JS, Express JS, Strapi</li>
+						<li>Python, Rust, Typescript</li>
+						<li>PostgreSQL, MongoDB.</li>
+					</ul>
+					<ul class="info-group">
+						<h2>Passionate About</h2>
+						<li>Full-stack web development</li>
+						<li>UI/UX Design</li>
+						<li>Automation</li>
+						<li>Electronics/Robotics</li>
+						<li>DevOps</li>
+					</ul>
+				</section>
+			</div>
+			<main class="list list-with-padding">
 				<h1 class="page-title">Blog Posts</h1>
 				{{ $pages := where .Site.RegularPages "Type" "in"
 				.Site.Params.mainSections }} {{ $paginator := .Paginate (where $pages
@@ -24,6 +51,49 @@
 				</section>
 				{{ end }}
 			</main>
+			<a class="pagination-show-more" href="posts">Show more posts</a>
+
+			<section>
+				<h1 class="page-title">Projects</h1>
+				<p>
+					Here are some of my projects that I've done. You can find more of my
+					projects on my
+					<a href="https://github.com/raihanstark">GitHub</a>.
+				</p>
+
+				<section class="project">
+					<img src="https://i.imgur.com/PKAABSC.webp" />
+					<div class="project-meta">
+						<h2>Personal Website</h2>
+						<p>
+							This website is built using Hugo static site generator and hosted
+							on Netlify. I use Tailwind CSS for styling and I also use
+							JavaScript for some of the features.
+						</p>
+						<nav class="nav tags">
+							<ul class="tags">
+								<li><a href="#">Next JS</a></li>
+							</ul>
+						</nav>
+					</div>
+				</section>
+
+				<a class="pagination-show-more" href="posts">Show more projects</a>
+			</section>
+
+			<section>
+				<h1 class="page-title">Contact</h1>
+				<p>
+					You can contact me via email at
+					<a href="mailto:raihanyudosaputra30@gmail.com"
+						>raihanyudosaputra30@gmail.com</a
+					>
+					or if you want to do a project with me, you can find me at
+					<a href="https://www.upwork.com/freelancers/~01d2512dcdb14ff0a9"
+						>Upwork</a
+					>
+				</p>
+			</section>
 			{{ partial "footer.html" . }}
 		</div>
 	</body>
