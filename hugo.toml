@@ -16,6 +16,9 @@ paginate=10 # articles per page
 	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
 	mathjax = true # enable MathJax support
 	katex = true # enable KaTeX support
+	#
+	description = "I'm a software engineer who loves everything about web development and solving everyday problem with codes."
+
 
 # Social Tags
 
