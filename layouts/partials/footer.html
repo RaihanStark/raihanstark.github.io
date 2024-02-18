@@ -2,7 +2,7 @@
   <div class="footer-info">
     {{ dateFormat "2006" now }} © {{ with .Site.Copyright }} {{ . }} {{ end }}
   </div>
-  <a href="#">Buy me a coffee</a>
+  <a href="#">☕️ Buy me a coffee</a>
 </footer>
 {{ if not .Site.IsServer }} {{ template "_internal/google_analytics_async.html"
 . }} {{ end }} {{- if (isset .Site.Params "social") -}}
