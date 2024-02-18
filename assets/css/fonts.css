@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Poppins:wght@400;600&display=swap')
 /* fira-sans-regular - latin */
 @font-face {
   font-display: swap;
@@ -12,6 +13,7 @@
        url('../fonts/fira-sans-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/fira-sans-v10-latin-regular.svg#FiraSans') format('svg'); /* Legacy iOS */
 }
+
 /* roboto-mono-regular - latin */
 @font-face {
   font-display: swap;

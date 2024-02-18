@@ -30,6 +30,11 @@ pre {
   overflow-x: auto;
   padding: 1em;
 }
+
+.content {
+    background-color: #171717;
+}
+
 blockquote {
   border-color: blue;
 }
