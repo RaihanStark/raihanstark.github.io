@@ -470,3 +470,8 @@ table td {
 .project .project-meta p {
   margin: 0;
 }
+
+/* TODO: Projects List Responsive */
+@media screen and (min-width: 680px) {
+
+}
