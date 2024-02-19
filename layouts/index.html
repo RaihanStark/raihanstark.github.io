@@ -60,11 +60,14 @@
         <a href="https://github.com/raihanstark">GitHub</a>.
       </p>
 
-      <div class="project-container">
+      {{ $count := 0 }}
+      <ul class="project-container">
+        {{- range .Site.RegularPages -}}
+        {{- if and (eq .Section "projects") (lt $count 4) -}}
         <section class="project">
           <img src="https://i.imgur.com/PKAABSC.webp" />
           <div class="project-meta">
-            <h2>Personal Website</h2>
+            <h2>{{.Title}}</h2>
             <p>
               This website is built using Hugo static site generator and hosted
               on Netlify. I use Tailwind CSS for styling and I also use
@@ -77,77 +80,11 @@
             </nav>
           </div>
         </section>
-
-        <section class="project">
-          <img src="https://i.imgur.com/PKAABSC.webp" />
-          <div class="project-meta">
-            <h2>Personal Website</h2>
-            <p>
-              This website is built using Hugo static site generator and hosted
-              on Netlify. I use Tailwind CSS for styling and I also use
-              JavaScript for some of the features.
-            </p>
-            <nav class="nav tags">
-              <ul class="tags">
-                <li><a href="#">Next JS</a></li>
-              </ul>
-            </nav>
-          </div>
-        </section>
-
-        <section class="project">
-          <img src="https://i.imgur.com/PKAABSC.webp" />
-          <div class="project-meta">
-            <h2>Personal Website</h2>
-            <p>
-              This website is built using Hugo static site generator and hosted
-              on Netlify. I use Tailwind CSS for styling and I also use
-              JavaScript for some of the features.
-            </p>
-            <nav class="nav tags">
-              <ul class="tags">
-                <li><a href="#">Next JS</a></li>
-              </ul>
-            </nav>
-          </div>
-        </section>
-
-        <section class="project">
-          <img src="https://i.imgur.com/PKAABSC.webp" />
-          <div class="project-meta">
-            <h2>Personal Website</h2>
-            <p>
-              This website is built using Hugo static site generator and hosted
-              on Netlify. I use Tailwind CSS for styling and I also use
-              JavaScript for some of the features.
-            </p>
-            <nav class="nav tags">
-              <ul class="tags">
-                <li><a href="#">Next JS</a></li>
-              </ul>
-            </nav>
-          </div>
-        </section>
-
-        <section class="project">
-          <img src="https://i.imgur.com/PKAABSC.webp" />
-          <div class="project-meta">
-            <h2>Personal Website</h2>
-            <p>
-              This website is built using Hugo static site generator and hosted
-              on Netlify. I use Tailwind CSS for styling and I also use
-              JavaScript for some of the features.
-            </p>
-            <nav class="nav tags">
-              <ul class="tags">
-                <li><a href="#">Next JS</a></li>
-              </ul>
-            </nav>
-          </div>
-        </section>
-      </div>
-
-      👉 <a class="pagination-show-more" href="posts">Show more projects</a>
+        {{ $count = add $count 1 }}
+        {{- end -}}
+        {{- end -}}
+      </ul>
+      👉 <a class="pagination-show-more" href="projects">Show more projects</a>
     </section>
 
     <section>

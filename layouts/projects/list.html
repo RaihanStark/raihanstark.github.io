@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{ if isset .Data "Term" }}
+<h1>Entries tagged - "{{ .Data.Term }}"</h1>
+{{ else }}
+<h1 class="page-title">All projects</h1>
+{{ end }}
+
+<ul class="project-container project-container-list">
+  {{- range .Data.Pages -}}
+  {{- if (not (in (.Site.Params.excludedTypes | default (slice "page")) .Type)) -}}
+  <section class="project">
+    <img src="https://i.imgur.com/PKAABSC.webp" />
+    <div class="project-meta">
+      <h2>{{.Title}}</h2>
+      <p>
+        This website is built using Hugo static site generator and hosted
+        on Netlify. I use Tailwind CSS for styling and I also use
+        JavaScript for some of the features.
+      </p>
+      <nav class="nav tags">
+        <ul class="tags">
+          <li><a href="#">Next JS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  {{- end -}}
+  {{- end -}}
+</ul>
+{{ end }}

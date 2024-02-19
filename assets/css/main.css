@@ -395,6 +395,11 @@ table td {
   grid-template-rows: repeat(auto-fill, minmax(280px, 1fr));
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 0 1.5rem;
+  padding-left: 0;
+}
+
+.project-container-list {
+  display:flex;
 }
 
 .project {
@@ -405,6 +410,14 @@ table td {
   box-shadow: 0px 4px 17px 0px #00000012;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+}
+
+.project .nav.tags {
+  margin-bottom: 1rem;
+}
+
+.project-container-list .project {
+  flex-direction: row;
 }
 
 .project:hover {
@@ -419,6 +432,16 @@ table td {
   border-bottom-right-radius: 0;
 }
 
+
+.project-container-list .project img {
+  width: 100%;
+  border: 0;
+  border-radius: 1rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  max-width: 300px;
+}
+
 .project .project-meta {
   padding: 0 1rem 0.5rem 1rem;
   display: flex;
@@ -429,6 +452,12 @@ table td {
 .project .project-meta h2 {
   margin-top: 15px;
 }
+
+.project-container-list .project .project-meta h2 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
 
 .project .project-meta p {
   margin: 0;
