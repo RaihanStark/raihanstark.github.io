@@ -63,7 +63,7 @@
       {{ $count := 0 }}
       <ul class="project-container">
         {{- range .Site.RegularPages -}}
-        {{- if and (eq .Section "projects") (lt $count 4) -}}
+        {{- if and (eq .Section "projects") (lt $count 6) -}}
         <section class="project">
           <img src="images/{{.Params.featured_image}}" />
           <div class="project-meta">
