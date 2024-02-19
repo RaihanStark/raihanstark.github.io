@@ -53,7 +53,7 @@
     👉 <a class="pagination-show-more" href="posts">Show more posts</a>
 
     <section>
-      <h1 class="page-title">💼 Projects</h1>
+      <h1 class="page-title">💼 Featured Projects</h1>
       <p>
         Here are some of my projects that I've done. You can find more of my
         projects on my
@@ -65,13 +65,16 @@
         {{- range .Site.RegularPages -}}
         {{- if and (eq .Section "projects") (lt $count 4) -}}
         <section class="project">
-          <img src="https://i.imgur.com/PKAABSC.webp" />
+          <img src="images/{{.Params.featured_image}}" />
           <div class="project-meta">
-            <h2>{{.Title}}</h2>
+            <h2>
+
+              <a href="{{ .Permalink }}" class="href-container">
+                {{.Title}}</a>
+
+            </h2>
             <p>
-              This website is built using Hugo static site generator and hosted
-              on Netlify. I use Tailwind CSS for styling and I also use
-              JavaScript for some of the features.
+              {{.Description}}
             </p>
             <nav class="nav tags">
               <ul class="tags">
