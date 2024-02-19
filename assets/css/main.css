@@ -390,24 +390,44 @@ table td {
 
 /* Project */
 
+.project-container {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 0 1.5rem;
+}
+
 .project {
   display: flex;
+  flex-direction: column;
   margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 17px 0px #00000012;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.02);
 }
 
 .project img {
-  width: 200px;
-  margin-right: 1rem;
+  width: 100%;
+  border: 0;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .project .project-meta {
+  padding: 0 1rem 0.5rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
 .project .project-meta h2 {
-  margin-top: 0;
+  margin-top: 15px;
 }
 
 .project .project-meta p {
