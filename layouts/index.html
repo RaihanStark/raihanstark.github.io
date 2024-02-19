@@ -40,13 +40,17 @@
     </div>
     <main class="list list-with-padding">
       <h1 class="page-title">📝 Blog Posts</h1>
-      {{ $pages := where .Site.RegularPages "Type" "in"
-      .Site.Params.mainSections }} {{ $paginator := .Paginate (where $pages
-      "Params.hidden" "ne" true) }} {{ range $paginator.Pages }}
+
+      {{ $posts := where .Site.RegularPages "Section" "posts" }}
+      {{ $paginator := .Paginate $posts }}
+
+      {{ range $paginator.Pages }}
       <section class="posts">
-        <a href="{{ .RelPermalink }}">{{.Title}}</a>
-        <time>{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }}
-          <span class="draft-label">DRAFT</span> {{ end }}</time>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <time>{{ dateFormat "Jan 2, 2006" .Date }}</time>
+        {{ if .Draft }}
+        <span class="draft-label">DRAFT</span>
+        {{ end }}
       </section>
       {{ end }}
     </main>
