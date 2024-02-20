@@ -8,7 +8,7 @@
   want to look more project, please visit my <a href="https://github.com/RaihanStark">Github Profile</a></p>
 {{ end }}
 
-<ul class="project-container project-container-list">
+<ul class="project-container">
   {{- range .Data.Pages -}}
   {{- if (not (in (.Site.Params.excludedTypes | default (slice "page")) .Type)) -}}
   <section class="project">
@@ -22,9 +22,13 @@
         {{.Description}}
       </p>
       <nav class="nav tags">
+
+        {{range .Params.tags}}
         <ul class="tags">
-          <li><a href="#">Next JS</a></li>
+          <li><a href="#">{{.}}</a></li>
         </ul>
+
+        {{end}}
       </nav>
     </div>
   </section>

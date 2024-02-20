@@ -415,6 +415,9 @@ table td {
 .project .nav.tags {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 .project-container-list .project {

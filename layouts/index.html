@@ -80,10 +80,14 @@
             <p>
               {{.Description}}
             </p>
+
             <nav class="nav tags">
+
+              {{range .Params.tags}}
               <ul class="tags">
-                <li><a href="#">Next JS</a></li>
+                <li><a href="#">{{.}}</a></li>
               </ul>
+              {{end}}
             </nav>
           </div>
         </section>
