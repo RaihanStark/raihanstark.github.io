@@ -1,114 +1,100 @@
 <!doctype html>
 <html lang="en">
-{{ partial "header.html" . }}
+  {{ partial "header.html" . }}
 
-<body>
-  <div class="content">
-    {{ partial "head.html" . }}
-    <div class="">
-      <h1 class="page-title">🙋‍♂️ About Me</h1>
-      <p>
-        Hi, I'm Raihan Yudo Saputra, a software engineer who loves writing
-        about software. Currently, my main focus is on Front-end Web
-        Development, but I also have a lot of interest in other fields of
-        software engineering, especially in Full-stack Development.
-      </p>
-      <p>
-        I'm also a full-time freelancer. If you have a project that you want
-        to get started, think you need my help with something or just fancy
-        saying hey, then get in touch.
-      </p>
+  <body>
+    <div class="content">
+      {{ partial "head.html" . }}
+      <div class="">
+        <h2 class="page-title">🙋‍♂️ About Me</h2>
+        <p>
+          I'm a software engineer based in Indonesia specializing in building
+          web applications, web scraping and stuff. I'm passionate about
+          technology and love to learn new things.
+        </p>
+        <p>
+          I'm also a founder of my own agency called
+          <a href="https://raihansoftware.co.id" target="_blank"
+            >Raihan Software</a
+          >. If you interested to work with me, you can contact me via email at
+          <a href="mailto:raihan@raihansoftware.co.id"
+            >raihan@raihansoftware.co.id</a
+          >. Feel free to reach out to me!
+        </p>
 
-      <section class="info-section">
-        <ul class="info-group">
-          <h2>💻 Skills</h2>
-          <li>React, Next JS</li>
-          <li>Material UI, Tailwind</li>
-          <li>Node JS, Express JS, Strapi</li>
-          <li>Python, Rust, Typescript</li>
-          <li>PostgreSQL, MongoDB.</li>
-        </ul>
-        <ul class="info-group">
-          <h2>📚 Passionate About</h2>
-          <li>Full-stack web development</li>
-          <li>UI/UX Design</li>
-          <li>Automation</li>
-          <li>Electronics/Robotics</li>
-          <li>DevOps</li>
-        </ul>
-      </section>
-    </div>
-    <main class="list list-with-padding">
-      <h1 class="page-title">📝 Blog Posts</h1>
-
-      {{ $posts := where .Site.RegularPages "Section" "posts" }}
-      {{ $paginator := .Paginate $posts }}
-
-      {{ range $paginator.Pages }}
-      <section class="posts">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <time>{{ dateFormat "Jan 2, 2006" .Date }}</time>
-        {{ if .Draft }}
-        <span class="draft-label">DRAFT</span>
-        {{ end }}
-      </section>
-      {{ end }}
-    </main>
-    👉 <a class="pagination-show-more" href="posts">Show more posts</a>
-
-    <section>
-      <h1 class="page-title">💼 Featured Projects</h1>
-      <p>
-        Here are some of my projects that I've done. You can find more of my
-        projects on my
-        <a href="https://github.com/raihanstark">GitHub</a>.
-      </p>
-
-      {{ $count := 0 }}
-      <ul class="project-container">
-        {{- range .Site.RegularPages -}}
-        {{- if and (eq .Section "projects") (lt $count 6) -}}
-        <section class="project">
-          <img src="images/{{.Params.featured_image}}" />
-          <div class="project-meta">
-            <h2>
-
-              <a href="{{ .Permalink }}" class="href-container">
-                {{.Title}}</a>
-
-            </h2>
-            <p>
-              {{.Description}}
-            </p>
-
-            <nav class="nav tags">
-
-              {{range .Params.tags}}
-              <ul class="tags">
-                <li><a href="#">{{.}}</a></li>
-              </ul>
-              {{end}}
-            </nav>
-          </div>
+        <section class="info-section">
+          <ul class="info-group">
+            <h2>💻 Main Expertise</h2>
+            <li>React, Next JS</li>
+            <li>Material UI, Tailwind</li>
+            <li>Node JS, Express JS, Strapi</li>
+            <li>Python, Typescript</li>
+            <li>PostgreSQL, MongoDB.</li>
+          </ul>
+          <ul class="info-group">
+            <h2>📚 Passionate About</h2>
+            <li>Full-stack web development</li>
+            <li>Automation</li>
+            <li>Electronics/Robotics</li>
+            <li>DevOps</li>
+            <li>Cyber Security</li>
+          </ul>
         </section>
-        {{ $count = add $count 1 }}
-        {{- end -}}
-        {{- end -}}
-      </ul>
-      👉 <a class="pagination-show-more" href="projects">Show more projects</a>
-    </section>
+      </div>
+      <main class="list list-with-padding">
+        <h2 class="page-title">📝 Blog Posts</h2>
 
-    <section>
-      <h1 class="page-title">📧 Contact</h1>
-      <p>
-        You can contact me via email at
-        <a href="mailto:raihanyudosaputra30@gmail.com">raihanyudosaputra30@gmail.com</a>
-        or if you want to do a project with me, you can find me at
-        <a href="https://www.upwork.com/freelancers/~01d2512dcdb14ff0a9">Upwork</a>
-      </p>
-    </section>
-    {{ partial "footer.html" . }}
-  </div>
-</body>
+        {{ $posts := where .Site.RegularPages "Section" "posts" }} {{ $paginator
+        := .Paginate $posts }} {{ range $paginator.Pages }}
+        <section class="posts">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <time>{{ dateFormat "Jan 2, 2006" .Date }}</time>
+          {{ if .Draft }}
+          <span class="draft-label">DRAFT</span>
+          {{ end }}
+        </section>
+        {{ end }}
+      </main>
+      👉 <a class="pagination-show-more" href="posts">Show more posts</a>
 
+      <section>
+        <h2 class="page-title">💼 Featured Projects</h2>
+        <p>
+          Here are some of my projects that I've done. You can find more of my
+          projects on my
+          <a href="https://github.com/raihanstark">GitHub</a>.
+        </p>
+
+        {{ $count := 0 }}
+        <ul class="project-container">
+          {{- range .Site.RegularPages -}} {{- if and (eq .Section "projects")
+          (lt $count 6) -}}
+          <section class="project">
+            <img src="images/{{.Params.featured_image}}" />
+            <div class="project-meta">
+              <h2>
+                <a href="{{ .Permalink }}" class="href-container">
+                  {{.Title}}</a
+                >
+              </h2>
+              <p>{{.Description}}</p>
+
+              <nav class="nav tags">
+                {{range .Params.tags}}
+                <ul class="tags">
+                  <li><a href="#">{{.}}</a></li>
+                </ul>
+                {{end}}
+              </nav>
+            </div>
+          </section>
+          {{ $count = add $count 1 }} {{- end -}} {{- end -}}
+        </ul>
+        👉
+        <a class="pagination-show-more" href="projects">Show more projects</a>
+      </section>
+
+      {{ partial "footer.html" . }}
+    </div>
+  </body>
 </html>

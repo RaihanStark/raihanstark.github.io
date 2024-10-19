@@ -1,40 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
 /* Markdown */
 :root {
-    --maincolor: #a9a6ff;
+  --maincolor: #a9a6ff80;
   --bordercl: rebeccapurple;
   --callouctcolor: dodgerblue;
-  --hovercolor: navy;
+  --hovercolor: #a9a6ff;
   --darkMaincolor: #50fa7b;
 }
 
 html {
-  color: #232333;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter" !important;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6em;
+  color: white;
+  background-color: #202124;
 }
+
 body {
   display: block;
   margin: 8px;
-  background-color: #f1f0ff;
 }
+
+.content {
+  background-color: transparent !important;
+}
+
+.content header nav a:first-child {
+  margin-left: 0 !important;
+}
+
+.content header nav a {
+  margin-left: 0.5rem;
+}
+
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-::selection {
-  background: var(--maincolor);
-  color: #fff;
-}
-
 #dark-mode-toggle {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 p {
-  font-family: "Fira Sans", sans-serif;
   line-height: 1.5;
+  color: #e2e2e2 !important;
 }
 
 hr {
@@ -56,7 +66,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  background-color: var(--hovercolor);
+  border-color: var(--hovercolor);
   color: #fff;
 }
 
@@ -138,7 +148,7 @@ pre code {
   word-wrap: break-word;
   background-color: white;
   padding: 0.25rem 1.5rem;
-  border-radius: 1.25rem
+  border-radius: 1.25rem;
 }
 
 /* Header */
@@ -146,47 +156,14 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 1em 0;
+  margin: 1em 0 2.5em 0;
   line-height: 2.5em;
 }
 
 header .main {
   font-size: 1.5rem;
   font-weight: 600;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 1.2rem;
-  margin-top: 2em;
-}
-
-h1::before {
-  color: var(--maincolor);
-  content: "# ";
-}
-h2::before {
-  color: var(--maincolor);
-  content: "## ";
-}
-h3::before {
-  color: var(--maincolor);
-  content: "### ";
-}
-h4::before {
-  color: var(--maincolor);
-  content: "#### ";
-}
-h5::before {
-  color: var(--maincolor);
-  content: "##### ";
-}
-h6::before {
-  color: var(--maincolor);
-  content: "###### ";
+  margin-right: 1rem;
 }
 
 .meta {
@@ -218,6 +195,10 @@ footer {
 }
 
 /* Common */
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
 .title h1 {
   margin-bottom: 0;
 }
@@ -228,7 +209,7 @@ time {
 
 /* Posts */
 article .title {
-  margin-bottom: 0!important;
+  margin-bottom: 0 !important;
 }
 
 /* Callout */
@@ -264,7 +245,7 @@ article .title {
 }
 .tags a:hover {
   color: white;
-  background-color: var(--hovercolor);
+  border-color: var(--hovercolor);
 }
 svg {
   max-height: 15px;
@@ -399,7 +380,7 @@ table td {
 }
 
 .project-container-list {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -410,6 +391,7 @@ table td {
   border-radius: 1rem;
   box-shadow: 0px 4px 17px 0px #00000012;
   transition: transform 0.3s ease-in-out;
+  background-color: #191919;
 }
 
 .project .nav.tags {
@@ -438,7 +420,6 @@ table td {
   object-fit: cover;
 }
 
-
 .project-container-list .project img {
   width: 100%;
   border: 0;
@@ -454,15 +435,16 @@ table td {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%!important;
+  height: 100% !important;
 }
 
 .m-0 {
-  margin: 0!important;
+  margin: 0 !important;
 }
 
 .project .project-meta h2 {
   margin-top: 15px;
+  line-height: 1.5;
 }
 
 .project-container-list .project .project-meta h2 {
@@ -470,12 +452,10 @@ table td {
   margin-bottom: 0.5rem;
 }
 
-
 .project .project-meta p {
   margin: 0;
 }
 
 /* TODO: Projects List Responsive */
 @media screen and (min-width: 680px) {
-
 }
