@@ -2,6 +2,10 @@
 layout: post
 title: How to Get a Job If You Don't Have a Degree?
 date: 2024-12-21 16:43 +0700
+image: https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8q7fnsafyb96bse4f7sw.png
+categories: [career, webdev]
+tags: [self-improvement]
+description: "A comprehensive guide on how to secure a job without a formal degree, based on personal experience and practical advice."
 ---
 
 ## Background
@@ -18,7 +22,7 @@ Many of them are not taking their lectures seriously, it is absolutely possible 
 
 So, How can we actually compete with them?
 
-## 1. Get good at what you like.
+## 1. Get good at what you like
 
 ![roadmap.sh](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/935szd3xqng4qgjg5ljx.png)
 
@@ -28,7 +32,7 @@ If you already had one that you like the most, stick with it. Be a master of it.
 
 Don't switch to too many languages or stacks. If you are confused about what should you learn, I recommend you to look at the [roadmap.sh](https://roadmap.sh/) and follow the path.
 
-## 2. Build your portfolio.
+## 2. Build your portfolio
 
 ![portfolio](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6f2rcm2a8crset5dw9c6.png)
 
@@ -47,7 +51,7 @@ I recommend you to be actively committed on:
 
 So, build anything that came across your mind and show it to the world!
 
-## 3. Have a Good CV.
+## 3. Have a Good CV
 
 ![good cv looked like](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3f7624nb0269s2hkxxbn.png)
 Now, you got a technology you liked, you already had a bunch of projects that you showed on your Website, GitHub, Twitter, LinkedIn. The next step is to apply for a job!
@@ -56,7 +60,7 @@ You need to create a CV that appeals to the employers, that shows you in contras
 
 No need to add fancy graphics, skills bar, or anything like that. Just show them enough information of your quick summary of yourself. They will do research on your website, LinkedIn, GitHub, etc. So, Don't need to overwhelm them with too much information.
 
-## 4. Write a Perfect Cover Letter.
+## 4. Write a Perfect Cover Letter
 
 ![a good cover letter](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/glk279fraitsydennuwu.png)
 
@@ -64,7 +68,7 @@ You need to sell yourself pretty hard on this one. You have to convince them tha
 
 Tell them how much you loved programming, tell them your relevant experience if any, tell them you are a perfect candidate for the job, tell them what you know about their technology, etc.
 
-## 5. Keep up on working!
+## 5. Keep up on working
 
 ![motivation](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vobajcy40296q66nwgug.png)
 
