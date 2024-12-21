@@ -33,10 +33,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/raihanstark
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
     - https://www.linkedin.com/in/raihan-yudo-saputra
-
 # Site Verification Settings
 webmaster_verifications:
   google: # fill in your Google verification code
