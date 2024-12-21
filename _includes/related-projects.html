@@ -1,0 +1,57 @@
+<!-- Show other 3 random projects, excluding the current one -->
+
+{% assign TOTAL_SIZE = 3 %} {% assign other_projects = site.projects |
+where_exp: "project", "project.url != page.url" | sample: TOTAL_SIZE %} {% if
+other_projects.size > 0 %}
+<aside id="related-projects" aria-labelledby="related-label">
+  <h3 class="mb-4" id="related-label">Other Projects</h3>
+  <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+    {% for project in other_projects %}
+    <article class="col">
+      <a
+        href="{{ project.url | relative_url }}"
+        class="post-preview card h-100 bg-dark border-secondary"
+      >
+        {% if project.image %} {% assign src = project.image.path | default:
+        project.image %} {% unless src contains '//' %} {% assign src =
+        project.media_subpath | append: '/' | append: src | replace: '//', '/'
+        %} {% endunless %}
+
+        <img
+          src="{{ src }}"
+          class="card-img-top object-fit-cover"
+          alt="{{ project.title }}"
+          style="height: 140px"
+        />
+        {% endif %}
+
+        <div class="card-body text-muted">
+          {% include datetime.html format="%Y" date=project.date
+          lang=include.lang %}
+          <h4 class="card-title pt-0 my-2">{{ project.title }}</h4>
+          <div class="small">
+            <p>{{project.description}}</p>
+          </div>
+        </div>
+      </a>
+    </article>
+    {% endfor %}
+  </nav>
+</aside>
+{% endif %}
+
+<style>
+  [data-bs-theme="dark"] .post-preview.card {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-secondary);
+  }
+
+  .post-preview.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .post-preview .card-img-top {
+    border-bottom: 1px solid var(--bs-secondary);
+  }
+</style>
