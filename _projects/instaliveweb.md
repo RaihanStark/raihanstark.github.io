@@ -1,39 +1,43 @@
 ---
 layout: project
-title: "InstaLiveWeb: Instagram Live Dashboard"
-date: 2020-06-00 00:00 +0700
-image: /assets/img/instaliveweb.png
-description: An Instagram Live Third-Party Platform to provides you with a RTMP server and stream key for streaming using software like OBS-Studio.
+title: "Raven Raffles 2.0: SaaS Web Application"
+date: 2019-06-00 00:00 +0700
+image: /assets/img/raven.png
+description: "Software as a service (SaaS) Web Application for users that want to participate in sneakers raffles in bulk to get the higher chances of winning."
+copyright: Raven Restocks
 ---
 
 ## Introduction
 
-An Instagram Live Third-Party Platform to provides you with a RTMP server and stream key for streaming using software like OBS-Studio.
+Raven Raffles is a product of a Raven Restocks. I'm the one in charge to develop it from ground up to production.
+They gave me privilage to choose any technology to build as long as with Python, and They also provided me with complete UI/UX design.
 
-## Problems
+## Problem
 
-Instagram did not provide RTMP for user to stream outside Instagram Client.
+Sneakers Brands and Distributors usually has Raffle Competition, where people gather and join the (sort of) giveaway where they will pick people randomly for a sneakers with a retail price.
+
+Why people really want it? because we could resell the sneakers with a BIG margin of profit, and sneakers has its own market - people will buy it.
 
 ## Solution
 
-We reverse engineering the Instagram API to get the RTMP from the Instagram Server, and we created a dashboard for it so user can easily use and manage it.
+Because it is VERY hard to win raffle. In order to win this Raffle, or at least have advantages on chances to win than others. We could join multiple times with multiple identity, payment methods, and etc.
 
-## Features
-
-- Live Comments
-- Live Viewers
-- Generate RTMP Server
-- Login with your Instagram Account
-- OTP Handler
-- Start and Stop Broadcast
+We provide BOT to automatically join any raffles and have GREATER chances of winning than others.
 
 ## Technology Used
 
-- Python, Javascript, HTML/SCSS
-- Jquery, Ajax and other supporting library
-- Flask, Flask-WTF, Flask-Session, and more
-- Heroku.
+- Python, Javascript
+- Flask/Django, Jquery Ajax
+- Requests, Selenium, HTTP Session, Cookie Manipulation
+- Discord Webhooks, REST API
+- Sentry for Error Monitoring
+- Heroku, NginX, Gunicorn, Honcho
+- SQLAlchemy for ORM
+- PostgreSQL and SQLite for testing
+- Redis for Task Management
+- more …
 
 ## Other Images
 
-![other picture of instaliveweb](/assets/img/instaliveweb-2.png)
+![](/assets/img/raven-2.png)
+![](/assets/img/raven-3.png)

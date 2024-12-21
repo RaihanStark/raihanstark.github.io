@@ -7,7 +7,8 @@ type: project-list
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
   <div class="row row-cols-1 row-cols-md-2 g-4">
-    {% for post in site.projects %}
+{% assign posts = site.projects | sort: 'date' | reverse %}
+    {% for post in posts %}
     <div class="col">
             <a href="{{ post.url | relative_url }}" class="text-decoration-none h-100">
     <article class="card-wrapper card h-100">
