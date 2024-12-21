@@ -22,10 +22,11 @@ permalink: /feed.xml
   <icon>{{ site.baseurl }}/assets/img/favicons/favicon.ico</icon>
   <logo>{{ site.baseurl }}/assets/img/favicons/favicon-96x96.png</logo>
 
-{% for post in site.posts limit: 5 %}
+{% assign all_content = site.posts | concat: site.projects | sort: 'date' | reverse | limit: 10 %}
+{% for post in all_content %}
   {% assign post_absolute_url = post.url | absolute_url %}
   <entry>
-    <title>{{ post.title }}</title>
+    <title>{{ post.title }}{% if post.collection == 'projects' %} [Project]{% endif %}</title>
     <link href="{{ post_absolute_url }}" rel="alternate" type="text/html" title="{{ post.title | xml_escape }}" />
     <published>{{ post.date | date_to_xmlschema }}</published>
   {% if post.last_modified_at %}
@@ -43,6 +44,10 @@ permalink: /feed.xml
     {% for category in post.categories %}
     <category term="{{ category }}" />
     {% endfor %}
+  {% endif %}
+
+  {% if post.collection %}
+    <category term="{{ post.collection }}" />
   {% endif %}
 
   <summary>{% include post-description.html max_length=400 %}</summary>
