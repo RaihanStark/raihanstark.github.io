@@ -1,7 +1,7 @@
 # The Site Configuration
 
 # Import the theme
-theme: jekyll-t/home/raihan/Projects/raihanstark.github.io/package-lock.json_hidden_message/home/raihan/Projects/raihanstark.github.io/package-lock.json_hidden_messageheme-chirpy
+theme: jekyll-theme-chirpy
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
@@ -35,7 +35,7 @@ social:
     - https://github.com/raihanstark
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    - https://www.linkedin.com/in/raihanyudosaputra
+    - https://www.linkedin.com/in/raihan-yudo-saputra
 
 # Site Verification Settings
 webmaster_verifications:
