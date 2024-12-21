@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-<img src="/assets/avatar.png" style="width: 240px;">
+<img src="/assets/avatar.png" alt="profile picture" style="width: 240px;">
 
 ---
 
